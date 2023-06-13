@@ -333,7 +333,7 @@ header .credentails .signup-container .signup-form .submit input{
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    flex-wrap: wrap;
+    
 }
 .contactus .container .contact-content img{
     width: 20rem;
