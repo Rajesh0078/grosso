@@ -1,0 +1,367 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Ubuntu:wght@300;400;500&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
+    text-transform: capitalize;
+    font-family: 'Ubuntu', sans-serif;
+    transition: all .2s linear;
+}
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 9rem;
+}
+html::-webkit-scrollbar{
+    width: 1.2rem;
+    background: #333;
+}
+html::-webkit-scrollbar-thumb{
+    background: #f0eee6;
+    border-radius: .5rem;
+}
+
+.btn{
+    border: .1rem solid #333;
+    padding: .8rem 3rem ;
+    font-size: 2rem;
+    color: #fff;
+    background: #423f2a;
+    margin-top: 1rem;
+    display: inline-block;
+}
+section{
+    padding: 2rem 6%;
+}
+section .title{
+    text-align: center;
+    font-size: 5rem;
+    padding-bottom: 4rem;
+}
+section span{
+    color: orangered;
+    margin-left: 1rem;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    position: fixed;
+    top: 0;left: 0;right: 0;
+    padding: 2rem 6%;
+    box-shadow: .8px .2px 1rem rgba(0, 0, 0, .8);
+    z-index: 1000;
+    background: #fff;
+}
+header .bar{
+    display: none;
+}
+header .navbar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+header .navbar li a{
+    margin: 0 1rem;
+    color: black;
+    font-size: 2rem;
+    font-weight: 500;
+}
+header .navbar li a:hover{
+    color: orangered;
+    border-bottom: .1rem solid orangered;
+    padding-bottom: .5rem;
+}
+header .logo h3{
+    font-family: 'Pacifico', cursive;
+    font-size: 2.5rem;
+}
+header .icons i{
+    margin: 0 1rem;
+    color: black;
+    font-size: 2.5rem;
+}
+header .icons i:hover{
+    color: orangered;
+}
+header .form-container{
+    position: absolute;
+    top: 115%;
+    right: 12%;
+    transform: scaleY(0);
+    transform-origin: top;
+}
+header .form-container.active{
+    transform: scaleY(1);
+}
+header .form-container form{
+    border: .1rem solid #444;
+}
+header .form-container input{
+    width: 50rem;
+    height: 5rem;
+    padding: 0 1rem;
+    font-size: 1.8rem;
+    border: none;
+}
+header .form-container input:focus{
+    border: none;
+    outline: none;
+}
+header .form-container label{
+    font-size: 2.2rem;
+    padding: 1rem;
+}
+header .form-container .search-container{
+    padding: 1rem 0;
+    display: none;
+}
+header .form-container .search-container li{
+    font-size: 2rem;
+    padding: .8rem 01rem;
+    border-bottom: .1rem solid #33333356;
+}
+
+header .credentails{
+    position: absolute;
+    top: 150%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #464141;
+    max-width: 45rem;
+    max-height: 50rem;
+    padding: 2.5rem;
+    border-radius: 1rem;
+    box-shadow: .1px .5px .9rem rgba(0, 0, 0, .8);
+    display: none;
+}
+header .credentails.active{
+    display: block;
+}
+header .credentails .signup-container .title{
+    font-size: 3rem;
+    padding-bottom:2.5rem ;
+    color: #fff;
+    letter-spacing: .5rem;
+    font-weight: 500;
+}
+header .credentails .signup-container .signup-form{
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+header .credentails .signup-container .signup-form .box{
+    width: calc(100% / 2 - 1rem);
+    display: flex;
+    flex-direction: column;
+}
+header .credentails .signup-container .signup-form .box label{
+    margin-bottom: .8rem;
+    color: #ffff;
+    font-size: 1.3rem;
+}
+header .credentails .signup-container .signup-form .box input{
+    padding: 1rem;
+    font-size: 1.5rem;
+    border-radius: .5rem;
+}
+header .credentails .signup-container .signup-form .box input:focus{
+    border: .1rem solid #fced9b;
+    outline: rgba(14, 14, 168, 0.856);
+}
+header .credentails .signup-container .signup-form .gender{
+    width: 100%;
+}
+header .credentails .signup-container .signup-form .gender .head{
+    font-size: 1.3rem;
+    padding-bottom: .8rem;
+    color: #ffff;
+}
+header .credentails .signup-container .signup-form .gender .box-1{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+}
+header .credentails .signup-container .signup-form .gender .box-1 label{
+    font-size: 1.8rem;
+    color: #fff;
+    margin-left: .5rem;
+}
+header .credentails .signup-container .signup-form .signin-link{
+    color: #fff;
+    font-size: 1.3rem;
+    width: 100%;
+}
+header .credentails .signup-container .signup-form .signin-link a{
+    margin-left: 1rem;
+    color: #fced9b;
+    font-size: 1.6rem;
+}
+header .credentails .signup-container .signup-form .submit:nth-child(9){
+    width: 100%;
+    margin-left: 50%;
+    transform: translateX(-30%);
+}
+header .credentails .signup-container .signup-form .submit input{
+    padding: 1rem 3rem;
+    font-size: 1.5rem;
+}
+.home{
+    background: url(./images/grosso.png), no-repeat, rgba(250, 238, 238, 0.925);
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    background-blend-mode: lighten;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.home .title{
+    font-size: 10rem;
+    font-family: 'Pacifico', cursive;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+.home p{
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    font-weight: 400;
+    text-transform: none;
+    text-align: center;
+    line-height: 1.6;
+}
+.home .small{
+    display: none;
+}
+.menu .menu-container .wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    flex-wrap: wrap;
+}
+.menu .menu-container .wrapper .card{
+    text-align: center;
+    background: rgba(117, 116, 116, 0.467);
+    border-radius: 2rem;
+    padding: 3rem;
+    max-height: 40rem;
+    width: 30rem;
+}
+.menu .menu-container .wrapper .card img{
+    width: 20rem;
+    border-radius: 50%;
+    height: 20rem;
+    object-fit: cover;
+}
+.menu .menu-container .wrapper .card h3{
+    font-size: 2rem;
+    padding: 1rem;
+}
+.menu .menu-container .wrapper .card p{
+    font-size: 1.5rem;
+    max-width: 20rem;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media  screen and (max-width:972px) {
+    html{
+        font-size: 55%;
+    }
+}
+@media  screen and (max-width:800px) {
+    html{
+        font-size: 50%;
+    }
+    header{
+        padding: 1.5rem 5%;
+    }
+}
+@media  screen and (max-width:720px) {
+    header .bar{
+        display: inline-block;
+        font-size: 2rem;
+    }
+    header .navbar{
+        display: flex;
+        position: absolute;
+        flex-direction: column;
+        top: 115%;
+        left: 3%;
+        align-items: flex-start;
+        transform: scaleY(0);
+        transform-origin: top;
+    }
+    header .navbar.active{
+        transform: scaleY(01);
+    }
+    header .navbar li{
+        padding-bottom: 2rem;
+    }
+    header .icons i{
+        margin: 0 .5rem;
+        color: black;
+        font-size: 2.4rem;
+    }
+    header .credentails{
+        max-height: 60rem;
+    }
+}
+@media  screen and (max-width:520px){
+    .home .small{
+        display: inline-block;
+        font-size: 8rem;
+        padding: 2rem;
+        font-family: 'Pacifico', cursive;
+    }
+    .home .small span{
+        font-size: 2rem;
+    }
+    .home .title{
+        display: none;
+    }
+}
+@media  screen and (max-width:400px){
+    header .credentails .signup-container .signup-form .submit:nth-child(9){
+        width: 100%;
+        margin-left: 50%;
+        transform: translateX(-50%);
+    }
+    
+}
